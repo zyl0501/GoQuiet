@@ -15,7 +15,7 @@ class BinaryProvider : NativePluginProvider() {
     }
 
     override fun getExecutable(): String {
-        val exec = context.applicationInfo.nativeLibraryDir + "/libgq-client.so"
+        val exec = context!!.applicationInfo.nativeLibraryDir + "/libgq-client.so"
         Log.d("execPath", exec)
         Log.d("execExists", File(exec).exists().toString())
         return exec
